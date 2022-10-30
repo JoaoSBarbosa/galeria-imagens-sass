@@ -61,7 +61,7 @@ body
     flex-wrap: wrap
 
     @include mixins.container
-    border: 2px solid red
+   
     @include mixins.mobile
         padding: 1.1rem
 
@@ -73,7 +73,7 @@ body
             height: 100%
             @include mixins.flex-center
             @include mixins.mobile
-               //display: none
+        
 
             li
                 margin: 0 1rem
@@ -102,7 +102,7 @@ body
 .quem-sou
     display: flex
     max-width: variables.$container-width
-    //padding: 20px
+    
     margin: 0 auto
 
     @include mixins.container
@@ -110,7 +110,7 @@ body
     padding: 0
     &-card
         width: 40%
-        height: 600px
+        height: 500px
         border-radius: 10px
         background-color: #fff
         flex-direction: column
@@ -154,32 +154,42 @@ body
     margin: 3rem 0px
 .projetos
     margin: 25px
-    background-color: blue
+    h2
+        text-align: center
+        padding: 10px
+   
 .project-scope
 
-    background-color: #eef
-    border: 2px solid red
+    background-color: #1d1d1d
     padding: 15px
     max-width: 1200px
     display: flex
     margin: 0 auto
     flex-wrap: wrap
-    margin-bottom: 10px
+    margin-bottom: 30px
+    border-radius: 16px
 
-    //margin: 0 auto
-    //background-color: red
+    &-card
+        &:hover
+            text-transform: uppercase
+            //letter-spacing: 12px 
+            line-height: 23px
+            color: #000
+            background-color: #c6c6c6
+            border-radius: 20px
+            
+
+
     &-card
         margin: 10px
         width: 500px
-        //height: 620px
-        border: 4px solid green
+        
         h3
-            border: 2px solid red
             margin: 4px 0px 10px 0px
             padding: 10px 0px
             text-align: center
         .descricao
-            border: 2px solid red
+
             padding: 10px
             margin: 10px
         img
@@ -191,13 +201,11 @@ body
         padding: 10px
 
         ul
-            margin: 0px
-            border: 2px solid yellow
-
+          margin: 0px
         li
             list-style: square
             margin-left: 26px
-            border: 2px solid #10c8
+           
 .gallery
     @include mixins.flex-center
     @include mixins.container
