@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Galeria</title>
+   <link rel="icon" href="https://uploaddeimagens.com.br/images/004/083/050/full/20210331_183538_0000.ico?1667075903">
+   <!--- Fontes doGoogle --->
+   <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+   <!---Font Awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--- Estilização --->
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   <header class="header">
+      <a href="" class="header-brand">Galeria Ragnarök</a>
+
+      <nav class="header-navbar">
+         <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="servicos.html">Projetos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contatos</a></li>
+         </ul>
+      </nav>
+      <div class="header-social-media">
+         <ul>
+            <li><a href="https://www.linkedin.com/in/joao-da-silva-barbosa/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/JoaoSillva.Barbosa" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/joao_sbx/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://youtu.be/Wo5t3uUV8n4" target="_blank" title="Fonte"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://github.com/JoaoSBarbosa" target="_blank" title="Veja o meu portfólio"><i class="fab fa-github"></i></a></li>
+         </ul>
+      </div>
+   </header>
+   <main>
+      <h1 class="titulo-contato">Projetos</h1>
+
+      <section class="projetos">
+         <!-- Projeto DSMETA => div pai-->
+         <h2>DS META</h2>
+         <div class="project-scope">
+            <!-- imagem => div child 1 -->
+            <div class="project-scope-card" id="card-1">
+               <a href="https://dsmetaconsultadevendas.netlify.app/" target="_blank" title="Clique e veja a aplicação"> 
+                  <img src="https://uploaddeimagens.com.br/images/004/083/056/full/Screenshot_4.png?1667076748" alt="Imagem da aplicação em execução">
+               </a>
+            </div>
+
+            <!-- Tecnologias => div child 2 -->
+            <div class="project-scope-card" id="card-2">
+               <div class="descricao">
+                  <h3>Descrição</h3>
+                  Projeto full stack de uma aplicação web de demonstrativo de vendas, onde é possível pesquisar por datas e obter informações de vendedores. e com isso, através de um clique, enviar uma SMS com dados dos vendedores que foram destaque em vendas
+               </div>
+               <div class="tecnologias" id="front">
+                  <h3> Back end</h3>
+                  <ul>
+                     <li>Java</li>
+                     <li>Spring</li>
+                     <li>Postaman</li>
+                     <li>Banco de dados H2</li>
+                     <li>Envio de SMS - Twilio</li>
+                     <li>Heroku</li>
+                     <li>Deploy Netfly</li>
+                  </ul>
+               </div>
+               <div class="tecnologias" id="back">
+                  <h3>Front end</h3>
+                  <ul>
+                     <li>HTML</li>
+                     <li>CSS</li>
+                     <li>Figma</li>
+                     <li>Typescript</li>
+                  </ul>
+               </div>
+
+            </div>
+         </div>
+
+
+         <!-- Projeto Mega Senna -->
+         <h2>Mega Senna</h2>
+         <article class="project-scope">
+
+            <!-- Imagem div child 1 -->
+            <div class="project-scope-card" id="card-1">
+               <a href="https://megasena-bybarbosa.netlify.app/" target="_blank" title="Clique para ver a aplicação"> <img src="https://uploaddeimagens.com.br/images/004/083/098/full/Screenshot_5.png?1667083711" alt="Imagem da aplicação em execução"></a>
+
+            </div>
+
+            <!-- Tecnologias => div child 2 -->
+            <div class="project-scope-card" id="card-2">
+               <div class="descricao">
+                  <h3>Descrição</h3>
+                  <p> É uma aplicação web para um jogo de apostas codificado em JavaScript, onde:</p>
+                  <ul>
+                     <li>Não mais do que seis números podem ser selecionados.</li>
+                     <li>Os jogos são armazenados em arquivos do navegador.</li>
+                     <li>Jogos aleatórios podem ser gerados.</li>
+                     <li>Os jogos salvos serão excluídos quando clicar em "Novo Jogo".</li>
+                  </ul>
+               </div>
+
+               <div class="tecnologias" id="back">
+                  <h3>Front end</h3>
+                  <ul>
+                     <li>HTML</li>
+                     <li>CSS</li>
+                     <li>JavaScript</li>
+                  </ul>
+               </div>
+            </div>
+         </article>
+      </section>
+
+      <!-- Projeto bikcraft -->
+      <h2>Bikcraft</h2>
+      <article class="project-scope">
+         <!-- Imagem div child 1 -->
+         <div class="project-scope-card" id="card-1">
+            <a href="https://thebikcraft-project.netlify.app/" target="_blank" title="Clique para ver a aplicação"> <img src="https://uploaddeimagens.com.br/images/004/083/127/full/Screenshot_4.png?1667085829" alt="Imagem do site"></a>
+
+         </div>
+
+         <!-- Tecnologias => div child 2 -->
+         <div class="project-scope-card" id="card-2">
+            <div class="descricao">
+               <h3>Descrição</h3>
+               <p> 
+                  Um estudo sobre display flex e outros estilos para posicionamento de elementos
+               </p>
+            </div>
+
+            <div class="tecnologias" id="back">
+               <h3>Front end</h3>
+               <ul>
+                  <li>HTML</li>
+                  <li>CSS
+                     <ul>
+                        <li>Display flex</li>
+                        <li>justify-content</li>
+                        <li>flex-wrap</li>
+                        <li>grid-template-columns</li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </article>
+   </section>
+
+   </main>
+   <footer>
+      <p><span>Galeria Ragnarook</span> &copy;2022</p>
+   </footer>
+
+</body>
+
+</html>

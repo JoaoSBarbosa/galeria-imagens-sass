@@ -17,13 +17,55 @@ body a {
 body ul {
   list-style: none;
 }
+body .galeria-titulo {
+  text-align: center;
+  font-size: 3rem;
+}
 
+#btn-mobile {
+  display: none;
+  padding: 10px;
+  border-radius: 15%;
+}
+#btn-mobile:hover {
+  background-color: #20c997;
+}
+
+@media (max-width: 437px) {
+  .header-navbar {
+    flex-wrap: wrap;
+    display: block;
+    margin: 20px 0px;
+  }
+  .header-navbar a {
+    padding: 10px;
+    background-color: #282828;
+    border-radius: 4px;
+  }
+  .header-social-media {
+    display: block;
+    margin: 20px 0px;
+  }
+  .header-social-media a {
+    padding: 5px;
+    background-color: #282828;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 412) and (max-width: 425px) {
+  .header {
+    padding: 1.1rem;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 1170px;
   padding: 1.5rem 0;
   margin: 0 auto;
+  border: 2px solid red;
 }
 @media (max-width: 425px) {
   .header {
@@ -40,11 +82,6 @@ body ul {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 425px) {
-  .header-navbar ul {
-    display: none;
-  }
-}
 .header-navbar ul li {
   margin: 0 1rem;
   text-transform: uppercase;
@@ -56,22 +93,131 @@ body ul {
 .header-navbar ul li a:hover {
   color: #20c997;
 }
+.header-social-media {
+  align-items: center;
+  justify-content: center;
+}
 .header-social-media ul {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-@media (max-width: 425px) {
-  .header-social-media ul {
-    display: none;
-  }
-}
 .header-social-media ul li {
   margin: 0 1rem;
 }
 .header-social-media ul li a:hover {
   color: #20c997;
+}
+
+.quem-sou {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.quem-sou-card {
+  width: 40%;
+  height: 600px;
+  border-radius: 10px;
+  background-color: #fff;
+  flex-direction: column;
+  cor: #fff;
+  margin: 2rem;
+  color: #000;
+  padding: 20px 25px;
+}
+@media (max-width: 425px) {
+  .quem-sou-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+.quem-sou-card ul {
+  padding-left: 25px;
+}
+.quem-sou-card ul li {
+  list-style: square;
+  margin-bottom: 25px;
+  padding: 0px;
+}
+.quem-sou-card ul li:hover {
+  color: #20c997;
+}
+.quem-sou-card:hover {
+  text-transform: uppercase;
+  line-height: 23px;
+  border: 2px solid #20c997;
+}
+.quem-sou-card-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.quem-sou-card h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.quem-sou-card h2:hover {
+  color: #0B615E;
+}
+
+.titulo-contato {
+  text-align: center;
+  margin: 3rem 0px;
+}
+
+.projetos {
+  margin: 25px;
+  background-color: blue;
+}
+
+.project-scope {
+  background-color: #eef;
+  border: 2px solid red;
+  padding: 15px;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.project-scope-card {
+  margin: 10px;
+  width: 500px;
+  border: 4px solid green;
+}
+.project-scope-card h3 {
+  border: 2px solid red;
+  margin: 4px 0px 10px 0px;
+  padding: 10px 0px;
+  text-align: center;
+}
+.project-scope-card .descricao {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+.project-scope-card img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 10px;
+}
+.project-scope .tecnologias {
+  padding: 10px;
+}
+.project-scope .tecnologias ul {
+  margin: 0px;
+  border: 2px solid yellow;
+}
+.project-scope .tecnologias li {
+  list-style: square;
+  margin-left: 26px;
+  border: 2px solid rgba(17, 0, 204, 0.5333333333);
 }
 
 .gallery {
@@ -228,22 +374,592 @@ body ul {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/pessoas.jpg");
 }
 .gallery #card-9 {
+  background-repeat: no-repeat;
   background-image: url("../img/refeicoes.jpg");
   background-size: 100%;
   background-position: center;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-  transition: 0.6s;
+  transition: 0.1s;
 }
 .gallery #card-9:hover {
   background-size: 110%;
-  filter: grayscale(0%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/refeicoes.jpg");
+}
+
+.galeria-categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 425px) {
+  .galeria-categorias {
+    flex-direction: column;
+  }
+}
+.galeria-categorias-card {
+  width: 31%;
+  height: 450px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 425px) {
+  .galeria-categorias-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+.galeria-categorias #img-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/girafa.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #img-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/raposa.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #img-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/passaro1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #img-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/flamingos.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #img-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/cervo.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #img-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/medusa.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #img-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #city-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/city-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #city-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #arquitetura-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/arquitetura-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #arquitetura-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #astronomia-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/astronomia-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #astronomia-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/futebol.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/basquete.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/volei.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natacao.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/futebol-americano.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #esporte-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/hipismo.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #esporte-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #natureza-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/natureza-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #natureza-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #paisagem-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/paisagem-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #paisagem-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #pessoas-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/pessoas-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #pessoas-6:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-1 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-1.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-1:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-2 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-2.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-2:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-3 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-3.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-3:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-4 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-4.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-4:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-5 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-5.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-5:hover {
+  background-size: 110%;
+}
+.galeria-categorias #food-6 {
+  background-repeat: no-repeat;
+  background-image: url("../img/food-6.jpg");
+  background-size: 100%;
+  background-position: center;
+  transition: 0.1s;
+}
+.galeria-categorias #food-6:hover {
+  background-size: 110%;
 }
 
 footer {
   text-align: center;
   padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 footer span {
   font-weight: bold;
